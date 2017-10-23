@@ -86,6 +86,12 @@ module PushyDaemon
         user_agent: BmcDaemonLib::Conf.generate_user_agent,
         }
 
+      # Set custom headers if provided
+      @rule[:headers].each do |header_name, header_value|
+        log_debug "set header [#{header_name}] to [#{header_value}]"
+        headers[header_name] = header_value.to_s
+      end if @rule[:headers].is_a? Enumerable
+
       # Compute: payload MD5, HMAC signature
       headers_md5 headers, request_body
       headers_sign headers, @rule[:sign]

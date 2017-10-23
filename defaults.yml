@@ -46,4 +46,7 @@ rollbar:
 #     keys: "proxy.#"
 #     subscribe: false
 #     #relay: http://requestb.in/1clzv7v1
+#     headers:
+#       Authorization: none
+#       SampleHeader: header-value 
 
