@@ -82,6 +82,7 @@ module PushyDaemon
       # Prepare routing_key
       keys = []
       keys << @shouter_topic
+      keys << "ping"
       keys << SecureRandom.hex
       keys << @shouter_keys.sample if (@shouter_keys.is_a?(Array) && @shouter_keys.any?)
       routing_key = keys.join('.')
