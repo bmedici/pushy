@@ -38,12 +38,14 @@ rollbar:
 #     topic: proxy
 #     keys: proxy.#
 #     keys: proxy.key1, proxy.key2, proxy.key3
-    # keys: 
-    #     - proxy.key1
-    #     - proxy.key2
-    #     - proxy.key3
+#     keys: 
+#         - proxy.key1
+#         - proxy.key2
+#         - proxy.key3
 #     keys: "proxy.#"
 #     keys: "proxy.#"
 #     subscribe: false
-#     #relay: http://requestb.in/1clzv7v1
+#     relay: http://requestb.in/1clzv7v1
+#     headers:
+#       authorization: 'Basic qmsjfhkjsdgfhqfgqsfgqsc'
 
