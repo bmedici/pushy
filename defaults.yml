@@ -38,14 +38,19 @@ rollbar:
 #     topic: proxy
 #     keys: proxy.#
 #     keys: proxy.key1, proxy.key2, proxy.key3
-    # keys: 
-    #     - proxy.key1
-    #     - proxy.key2
-    #     - proxy.key3
-#     keys: "proxy.#"
-#     keys: "proxy.#"
+#     keys: 
+#       - proxy.key1
+#       - proxy.key2
+#       - proxy.key3
 #     subscribe: false
-#     #relay: http://requestb.in/1clzv7v1
+#     relay: http://target-host.com/url
+#     sign:
+#       method: hmac-kong
+#       user: brice+2@wildmoka.com
+#       secret: g9WoMkz0cp4C
+#       headers:
+#         - date
+#         - content-md5
 #     headers:
 #       Authorization: none
 #       SampleHeader: header-value 
