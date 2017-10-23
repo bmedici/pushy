@@ -1,4 +1,6 @@
 # common defaults
+daemonize: true
+
 broker: amqp://guest:guest@localhost:5672/%2F
 
 logs:
