@@ -86,6 +86,9 @@ module PushyDaemon
         user_agent: BmcDaemonLib::Conf.generate_user_agent,
         }
 
+      # Merge context headers
+      @rule.headers.each{|k, v| headers[k] = v } unless @rule.headers.is_a? Hashie
+
       # Compute: payload MD5, HMAC signature
       headers_md5 headers, request_body
       headers_sign headers, @rule[:sign]
