@@ -106,8 +106,8 @@ module PushyDaemon
       end
 
       # Check we have a topic and at least one routing key
-      fail BmcDaemonLib::MqConsumerError, "rule [#{rule_name}] lacking topic" unless rule_topic
-      fail BmcDaemonLib::MqConsumerError, "rule [#{rule_name}] lacking keys" if rule_keys.empty?
+      fail BmcDaemonLib::MqConsumerError, "rule [#{rule_name}]: missing topic" unless rule_topic
+      fail BmcDaemonLib::MqConsumerError, "rule [#{rule_name}]: missing keys" if rule_keys.empty?
 
       # Build a new consumer on its own channel
       channel = @conn.create_channel
